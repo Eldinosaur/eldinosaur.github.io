@@ -1,0 +1,202 @@
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.typewriter h1 {
+    overflow: hidden;
+    border-right: 0.15em solid white;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation: typing 3.5s steps(30, end), blink 0.75s step-end infinite;
+}
+
+.lang-es {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    /* Centra los botones horizontalmente */
+    flex-wrap: wrap;
+    /* Permite que los botones se envuelvan en pantallas pequeñas */
+    gap: 10px;
+    /* Añade espacio entre los botones */
+    padding: 10px 0;
+}
+
+
+nav a,
+#toggle-lang {
+    margin: 5px;
+    min-width: 120px;
+    /* Establece un ancho mínimo */
+    max-width: 200px;
+    /* Evita que los botones sean demasiado anchos */
+    text-align: center;
+    /* Centra el texto */
+}
+
+nav a.btn {
+    flex-grow: 1;
+    /* Ayuda a mantener consistencia entre botones */
+}
+
+#toggle-lang {
+    min-width: 100px;
+}
+
+@media (max-width: 768px) {
+
+    nav a,
+    #toggle-lang {
+        width: 100%;
+        /* Asegura que los botones se ajusten en dispositivos pequeños */
+        margin-bottom: 10px;
+    }
+
+    .custom-header {
+        padding: 3rem 1rem;
+        /* Reduce el padding para dispositivos pequeños */
+    }
+}
+
+.justified-text {
+    text-align: justify;
+}
+
+.floating-item {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: float 3s ease-in-out infinite;
+    z-index: 1000;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.custom-header {
+    background-image: url('assets/back.png');
+    background-size: contain;
+    /* Asegura que la imagen cubra todo el área del header */
+    background-position: center;
+    /* Centra la imagen */
+    background-attachment: fixed;
+    /* Hace que el fondo sea fijo al hacer scroll (opcional) */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    color: white;
+    /* Asegura que el texto sea visible sobre la imagen */
+    position: relative;
+    /* Permite agregar capas sobre el fondo */
+}
+footer {
+    background-image: url('assets/back.png'); /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el área del footer */
+    background-position: center; /* Centra la imagen en el footer */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: white; /* Asegura que el texto sea visible sobre la imagen */
+    padding: 2rem 0; /* Ajusta el padding para darle espacio al contenido */
+    text-align: center; /* Centra el texto */
+    position: relative; /* Permite agregar capas sobre el fondo */
+}
+body {
+    background-color:  #090909 ; 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+.btn-primary {
+    background-color:  #646464; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: 1px solid  #646464; /* Borde del botón */
+}
+
+.btn-primary:hover {
+    background-color: #545454  ; /* Color de fondo cuando el cursor pasa sobre el botón */
+    border-color: #545454  ; /* Color del borde cuando el cursor pasa sobre el botón */
+}
+
+.btn-primary:focus {
+    outline: none; /* Elimina el borde de enfoque */
+}
+.btn-secondary{
+    background-color:  #424242 ; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: 1px solid  #424242 ; /* Borde del botón */
+}
+
+.btn-secondary:hover {
+    background-color: #343434   ; /* Color de fondo cuando el cursor pasa sobre el botón */
+    border-color: #343434  ; /* Color del borde cuando el cursor pasa sobre el botón */
+}
+
+.btn-secondary:focus {
+    outline: none; /* Elimina el borde de enfoque */
+}
+.btn-warning{
+    background-color:  #a2a2a2 ; /* Color de fondo */
+    color: black; /* Color del texto */
+    border: 1px solid  #a2a2a2 ; /* Borde del botón */
+}
+
+.btn-warning:hover {
+    background-color: #343434   ; /* Color de fondo cuando el cursor pasa sobre el botón */
+    border-color: #343434  ; /* Color del borde cuando el cursor pasa sobre el botón */
+}
+
+.btn-warning:focus {
+    outline: none; /* Elimina el borde de enfoque */
+}
+.card {
+    background-color: #1c1c1c ; /* Color de fondo */
+    color: white; /* Color del texto */
+}
+
+.card-header {
+    background-color: #007bff; /* Color de fondo del encabezado de la tarjeta */
+    color: white; /* Color del texto del encabezado */
+}
+
+.card-footer {
+    background-color: #343a40; /* Color de fondo del pie de la tarjeta */
+    color: white; /* Color del texto del pie */
+}
+
+.card-body {
+    background-color: #1c1c1c ; /* Color de fondo del cuerpo de la tarjeta */
+}
